@@ -25,7 +25,7 @@ export default function Header() {
               </div>
             </div>
             <ul css={navMenu}>
-              <li className="active">봄신상추천</li>
+              <li className="active">스프링아우터</li>
               <li>베스트</li>
               <li>세일</li>
               <li>신상</li>

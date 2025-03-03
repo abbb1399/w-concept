@@ -2,22 +2,22 @@ export const swiperData = [
   [
     {
       url: "imgs/1.jpg",
-      text: {
-        title1: "새로운 계절을 함께",
-        title2: "닐나이피",
-        subTitle: "단독 ~5%+쿠폰팩",
-      },
+      text: null,
     },
     {
       url: "imgs/2.jpg",
-      text: null,
+      text: {
+        title1: "봄을 담은 색감",
+        title2: "그린버터",
+        subTitle: "오직 여기에서만 ~15%",
+      },
     },
     {
       url: "imgs/3.jpg",
       text: {
-        title1: "예술에서 얻은 영감",
-        title2: "루에브르",
-        subTitle: "~30%+쿠폰팩",
+        title1: "섬세한 아름다움",
+        title2: "그린버터",
+        subTitle: "단독 ~60%+쿠폰",
       },
     },
   ],
@@ -25,25 +25,25 @@ export const swiperData = [
     {
       url: "imgs/4.jpg",
       text: {
-        title1: "루피타의 스타일링",
-        title2: "시야쥬",
-        subTitle: "놓치면 아쉬운 할인 ~40%",
+        title1: "손이 가는 미니멀백",
+        title2: "오브히",
+        subTitle: "~15%+쿠폰",
       },
     },
     {
       url: "imgs/5.jpg",
       text: {
-        title1: "신상 가방만 모아보기",
-        title2: null,
+        title1: "산뜻한 봄 기운 물씬",
+        title2: "월간 라이브 3월호",
         subTitle: "특별한 쿠폰 혜택",
       },
     },
     {
       url: "imgs/6.jpg",
       text: {
-        title1: "뮤즈 김나영과 함께",
-        title2: "슈콤마보니",
-        subTitle: "사은품 증정",
+        title1: "버터 컬러 한 스푼",
+        title2: "조이그라이슨",
+        subTitle: "~50%+쿠폰",
       },
     },
   ],
@@ -51,25 +51,25 @@ export const swiperData = [
     {
       url: "imgs/7.jpg",
       text: {
-        title1: "싱그러웃 햇살을 담은",
-        title2: "뮤니에",
-        subTitle: "~10%+14%쿠폰",
+        title1: "환절기 맞춤 아우터",
+        title2: "노스페이스",
+        subTitle: "25SS 바람막이 오픈",
       },
     },
     {
       url: "imgs/8.jpg",
       text: {
-        title1: "특별한 날을 빛내줄",
-        title2: "세레모니웨어",
-        subTitle: "특별한 쿠폰 혜택",
+        title1: "내가 바라던 분위기",
+        title2: "프론트로우",
+        subTitle: "7%+14% 쿠폰",
       },
     },
     {
       url: "imgs/9.jpg",
       text: {
-        title1: "산뜻한 봄의 기운",
-        title2: "망고매니플리즈",
-        subTitle: "~30%+쿠폰팩",
+        title1: "올봄에도 스웨이드",
+        title2: "럭키슈에뜨",
+        subTitle: "오직 여기에서만 ~20%",
       },
     },
   ],
@@ -77,25 +77,25 @@ export const swiperData = [
     {
       url: "imgs/10.jpg",
       text: {
-        title1: "군더더기 없는 클래식",
-        title2: "퀸스래빗",
-        subTitle: "단독으로 만나는 신상 20%",
+        title1: "신상 가방만 모아보기",
+        title2: null,
+        subTitle: "특별한 쿠폰 혜택",
       },
     },
     {
       url: "imgs/11.jpg",
       text: {
-        title1: "계절이 바뀌는 옷장",
-        title2: "아노에틱",
-        subTitle: "단독 ~35%+쿠폰",
+        title1: "일상을 채우는 감각",
+        title2: "지비에이치 홈",
+        subTitle: "특별한 쿠폰 헤택 30%",
       },
     },
     {
       url: "imgs/12.jpg",
       text: {
-        title1: "수납력이 돋보여요",
-        title2: "르아보네",
-        subTitle: "단독 ~35%+쿠폰",
+        title1: "매일 손이 갈 캐주얼",
+        title2: "스텝어라운드",
+        subTitle: "단독 20%+쿠폰",
       },
     },
   ],
