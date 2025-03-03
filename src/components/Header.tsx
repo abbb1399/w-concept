@@ -245,6 +245,12 @@ const cateListItem = (isSame: boolean) => css`
     margin-top: -56px;
     margin-left: 144px;
     min-width: 880px;
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
   }
 
   .item-list {
