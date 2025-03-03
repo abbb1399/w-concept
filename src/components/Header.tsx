@@ -5,6 +5,8 @@ import { useState } from "react";
 import { navData } from "../data/navData";
 
 export default function Header() {
+  const [hoveredCateIndex, setHoveredCateIndex] = useState(0);
+
   return (
     <>
       <header css={headerStyle}>
@@ -13,13 +15,16 @@ export default function Header() {
             <BrandIcon />
           </div>
           <nav className="header-nav">
-            <div css={menuIcon}>
+            <div css={menuIcon} onMouseLeave={() => setHoveredCateIndex(0)}>
               <div className="menu-icon">
                 <MenuIcon />
               </div>
               <div className="dropdown">
                 <div className="dropdown-content">
-                  <CateList />
+                  <CateList
+                    hoveredCateIndex={hoveredCateIndex}
+                    setHoveredCateIndex={setHoveredCateIndex}
+                  />
                   <AsideList />
                 </div>
               </div>
@@ -137,9 +142,12 @@ const navMenu = css`
   }
 `;
 
-function CateList() {
-  const [hoveredCateIndex, setHoveredCateIndex] = useState<number>(0);
+type CateListProps = {
+  hoveredCateIndex: number;
+  setHoveredCateIndex: (index: number) => void;
+};
 
+function CateList({ hoveredCateIndex, setHoveredCateIndex }: CateListProps) {
   return (
     <div css={cateListContainer}>
       <ul className="list-dpt1">

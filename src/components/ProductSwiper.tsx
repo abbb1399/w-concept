@@ -26,7 +26,7 @@ export default function ProductSwiper() {
       css={swiperStyle}
       slidesPerView={"auto"}
       spaceBetween={18}
-      // autoplay={{ delay: 6000, disableOnInteraction: false }}
+      autoplay={{ delay: 6000, disableOnInteraction: false }}
       pagination={{
         el: ".swiper-progress",
         type: "custom",
