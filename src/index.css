@@ -9,6 +9,39 @@
 
 body {
   min-height: 110vh;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  color: #4d4c4c;
+}
+
+ul {
+  list-style: none;
 }
 
 progress {
@@ -27,4 +60,8 @@ progress::-webkit-progress-value {
   -moz-transition: width 1s ease;
   -o-transition: width 1s ease;
   transition: width 1s ease;
+}
+
+img {
+  display: block;
 }
