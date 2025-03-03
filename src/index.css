@@ -45,21 +45,3 @@ ul {
 img {
   display: block;
 }
-
-progress {
-  appearance: none;
-  width: 1202px;
-  height: 3px;
-}
-
-progress::-webkit-progress-bar {
-  background-color: rgb(238, 238, 238);
-}
-
-progress::-webkit-progress-value {
-  background-color: #000;
-  -webkit-transition: width 1s ease;
-  -moz-transition: width 1s ease;
-  -o-transition: width 1s ease;
-  transition: width 1s ease;
-}
