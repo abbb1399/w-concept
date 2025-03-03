@@ -103,7 +103,7 @@ type ProductType = {
 
 function ProductCard({ product }: { product: ProductType }) {
   return (
-    <div className="product-card" css={productCardStyle()}>
+    <div className="product-card" css={productCardStyle}>
       <img src={product.url} alt={`Product ${product.url}`} />
       {product.text && (
         <div className="text-box">
@@ -116,7 +116,7 @@ function ProductCard({ product }: { product: ProductType }) {
   );
 }
 
-const productCardStyle = () => css`
+const productCardStyle = css`
   width: 430px;
   height: 573px;
   border-radius: 24px;
@@ -222,16 +222,16 @@ const progressContainerStyle = css`
   justify-content: center;
   align-items: center;
   gap: 14px;
-`;
-
-const btnContainerStyle = css`
-  display: inline-flex;
-  align-items: center;
 
   .swiper-progress {
     display: flex;
     align-items: center;
   }
+`;
+
+const btnContainerStyle = css`
+  display: inline-flex;
+  align-items: center;
 
   .icon {
     cursor: pointer;
