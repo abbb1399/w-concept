@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 
 import { css } from "@emotion/react";
@@ -10,7 +10,6 @@ import { swiperData } from "../data/swiperData";
 
 export default function ProductSwiper() {
   const swiperRef = useRef<SwiperType | null>(null);
-  const [swiperIndex, setSwiperIndex] = useState(1);
   const [swiperPlayStatus, setPlaySwiper] = useState(true);
 
   const togglePlayHandler = () => {
@@ -28,8 +27,13 @@ export default function ProductSwiper() {
       slidesPerView={"auto"}
       spaceBetween={18}
       autoplay={{ delay: 6000, disableOnInteraction: false }}
-      onSlideChangeTransitionEnd={(swiper) => {
-        setSwiperIndex(swiper.realIndex + 1);
+      pagination={{
+        el: ".swiper-progress",
+        type: "custom",
+        renderCustom: function (_, current, total) {
+          const fillPer = (current / total) * 100;
+          return `<progress value="${fillPer}" max="100" />`;
+        },
       }}
       preventInteractionOnTransition
       loop
@@ -37,7 +41,7 @@ export default function ProductSwiper() {
       onBeforeInit={(swiper) => {
         swiperRef.current = swiper;
       }}
-      modules={[Autoplay]}
+      modules={[Autoplay, Pagination]}
     >
       {swiperData.map((group, groupIndex) => (
         <SwiperSlide key={groupIndex}>
@@ -49,7 +53,6 @@ export default function ProductSwiper() {
 
       <ProgressContainer
         swiperPlayStatus={swiperPlayStatus}
-        swiperIndex={swiperIndex}
         prev={() => swiperRef.current?.slidePrev()}
         next={() => swiperRef.current?.slideNext()}
         togglePlay={togglePlayHandler}
@@ -177,23 +180,19 @@ const productCardStyle = css`
 `;
 
 function ProgressContainer({
-  swiperIndex,
   swiperPlayStatus,
   prev,
   next,
   togglePlay,
 }: {
-  swiperIndex: number;
   swiperPlayStatus: boolean;
   prev: () => void;
   next: () => void;
   togglePlay: () => void;
 }) {
-  const progressPercentage = (swiperIndex / swiperData.length) * 100;
-
   return (
     <div css={progressContainerStyle}>
-      <progress value={progressPercentage} max="100" />
+      <div className="swiper-progress" />
       <div css={btnContainerStyle}>
         <ChevronLeft size={26} className="icon" onClick={prev} />
         <div className="divider" />
@@ -225,23 +224,27 @@ const progressContainerStyle = css`
   align-items: center;
   gap: 14px;
 
-  progress[value] {
-    appearance: none;
-    border: none;
-    width: 1202px;
-    height: 3px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  .swiper-progress {
+    display: flex;
+    align-items: center;
 
-    &::-webkit-progress-bar {
-      background-color: rgb(238, 238, 238);
-    }
+    progress[value] {
+      appearance: none;
+      border: none;
+      width: 1202px;
+      height: 3px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
 
-    &::-webkit-progress-value {
-      background-color: #000;
-      transition: width 100ms ease;
+      &::-webkit-progress-bar {
+        background-color: rgb(238, 238, 238);
+      }
+
+      &::-webkit-progress-value {
+        background-color: #000;
+      }
     }
   }
 `;
