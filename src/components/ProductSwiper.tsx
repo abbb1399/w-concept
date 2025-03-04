@@ -229,6 +229,10 @@ const progressContainerStyle = css`
     border: none;
     width: 1202px;
     height: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
     &::-webkit-progress-bar {
       background-color: rgb(238, 238, 238);
