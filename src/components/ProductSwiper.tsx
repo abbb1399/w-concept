@@ -31,6 +31,7 @@ export default function ProductSwiper() {
       onSlideChangeTransitionEnd={(swiper) => {
         setSwiperIndex(swiper.realIndex + 1);
       }}
+      preventInteractionOnTransition
       loop
       centeredSlides
       onBeforeInit={(swiper) => {

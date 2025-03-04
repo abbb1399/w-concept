@@ -2,22 +2,26 @@ export const swiperData = [
   [
     {
       url: "imgs/1.jpg",
-      text: null,
+      text: {
+        title1: "봄날에 피어난 컬렉션",
+        title2: "이바나헬싱키",
+        subTitle: "단독 ~15%+쿠폰",
+      },
     },
     {
       url: "imgs/2.jpg",
       text: {
-        title1: "봄을 담은 색감",
-        title2: "그린버터",
-        subTitle: "오직 여기에서만 ~15%",
+        title1: "옷장을 새롭게",
+        title2: "채울 타이밍",
+        subTitle: "어패럴 펀딩 ~52%+쿠폰",
       },
     },
     {
       url: "imgs/3.jpg",
       text: {
-        title1: "섬세한 아름다움",
-        title2: "그린버터",
-        subTitle: "단독 ~60%+쿠폰",
+        title1: "오래도록 함께할",
+        title2: "르메메",
+        subTitle: "단독 ~10%+쿠폰",
       },
     },
   ],
